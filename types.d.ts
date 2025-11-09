@@ -12,6 +12,9 @@ declare module 'motia' {
   }
 
   interface Handlers {
-    
+    'openAiSentimentAnalyzer': EventHandler<{ text: string }, { topic: 'openai.positiveSentiment'; data: { sentiment: string; analysis?: string; advice?: string } } | { topic: 'openai.negativeSentiment'; data: { sentiment: string; analysis?: string; advice?: string } }>
+    'handlePositive': EventHandler<{ sentiment: string; analysis?: string; advice?: string }, never>
+    'handleNegative': EventHandler<{ sentiment: string; analysis?: string; advice?: string }, never>
+    'analyzeSentimentApi': ApiRouteHandler<{ text: string }, unknown, { topic: 'openai.analyzeSentimentRequest'; data: { text: string } }>
   }
 }

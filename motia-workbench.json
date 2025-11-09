@@ -50,5 +50,26 @@
         "y": 264
       }
     }
+  },
+  {
+    "id": "sentiment-app",
+    "config": {
+      "steps/openAiAnalyzeSentiment.step.ts": {
+        "x": 219,
+        "y": 11
+      },
+      "steps/analyzeSentimentApi.step.ts": {
+        "x": -278,
+        "y": -11
+      },
+      "steps/handleNegative.step.ts": {
+        "x": 736,
+        "y": 196
+      },
+      "steps/handlePositive.step.ts": {
+        "x": 704,
+        "y": -185
+      }
+    }
   }
 ]
